@@ -67,7 +67,7 @@ pipeline {
             }
             post {
                 always {
-                    echo "Sending email notification with attached security logs for [Security Scan] stage..."
+                    echo "Sending email notification with attached security logs for [Security Scan] stage... testtt"
                     emailext (
                         to: "${env.NOTIFICATION_EMAIL}",
                         subject: "[SECURITY REPORT] ${env.PROJECT_NAME} - Stage: Security Scan - Status: ${currentBuild.currentResult}",
